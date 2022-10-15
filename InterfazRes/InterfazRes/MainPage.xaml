@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:InterfazRes.viewModel"
+             x:Class="InterfazRes.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:MainViewModel x:Name="vm" />
+    </ContentPage.BindingContext>
+
+    <Grid RowDefinitions="*, 2*, Auto">
+        <BoxView Grid.RowSpan="3">
+            <BoxView.Background>
+                <LinearGradientBrush>
+                    <GradientStopCollection>
+                        <GradientStop Color="#161616" Offset="0"/>
+                        <GradientStop Color="#30343F" Offset="1"/>
+                    </GradientStopCollection>
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+        <Grid>
+            <Path Data="M0,0H375V262.033s-9.025,4.813-55.426-10.71-70.141-83.047-130.3-83.22-83.544,67.7-130.893,83.22S0,262.033,0,262.033Z" 
+                  Aspect="Fill" Fill="#301B3F"/>
+            <Image Source="menu.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="Start" VerticalOptions="Start" Margin="25"/>
+            <Image Source="search.png" WidthRequest="20" HeightRequest="20" HorizontalOptions="End" VerticalOptions="Start" Margin="25" />
+
+        </Grid>
+        <StackLayout Grid.Row="1" HorizontalOptions="Center" Margin="0,-90,0,0" Spacing="10">
+            <Grid HeightRequest="250" WidthRequest="250" HorizontalOptions="Center">
+                <Ellipse StrokeThickness="2" Aspect="Fill" />
+                <Image x:Name="BannerImg" Source="https://i.ibb.co/q1QCnxR/LogoED.png" HeightRequest="250" WidthRequest="250" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+            <StackLayout HorizontalOptions="Center" Spacing="10">
+                <Label Text="" TextColor="White" FontSize="18" HorizontalOptions="Center" />
+                <Label Text="Express Delivery" TextColor="White" FontSize="45" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Button Text="Iniciar sesión" TextColor="White" BackgroundColor="#301B3F" WidthRequest="150" HeightRequest="46" 
+                        CornerRadius="23" HorizontalOptions="Center" Command="{Binding LoginCommand}"/>
+               
+            </StackLayout>
+        </StackLayout>
+        
+    </Grid>
+</ContentPage>
+
+
+

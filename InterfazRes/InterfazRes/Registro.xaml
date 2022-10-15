@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:InterfazRes.viewModel"
+             x:Class="InterfazRes.Registro">
+    <ContentPage.BindingContext>
+        <vm:MainViewModel x:Name="vm" />
+    </ContentPage.BindingContext>
+<ScrollView>
+    <Grid RowDefinitions="*, 2*, Auto">
+        <BoxView Grid.RowSpan="3">
+            <BoxView.Background>
+                <LinearGradientBrush>
+                    <GradientStopCollection>
+                        <GradientStop Color="#161616" Offset="0"/>
+                        <GradientStop Color="#30343F" Offset="1"/>
+                    </GradientStopCollection>
+                </LinearGradientBrush>
+            </BoxView.Background>
+        </BoxView>
+
+        
+        
+        <StackLayout Grid.Row="1" HorizontalOptions="Center" Margin="0,-300,0,0" Spacing="20">
+            
+            <Grid  WidthRequest="300" HorizontalOptions="Center">
+                
+                <Image x:Name="BannerImg" Source="https://i.ibb.co/q1QCnxR/LogoED.png" HeightRequest="250" WidthRequest="250" HorizontalOptions="Center" VerticalOptions="Center"/>
+            </Grid>
+                <Label Text="Registro" TextColor="White" FontSize="25" FontAttributes="Bold" HorizontalOptions="Center" Margin="10"/>
+                <Entry x:Name="txtNom" Placeholder="Nombres" TextColor="white" PlaceholderColor="#b2bec3"/>
+            <Entry x:Name="txtApe" Placeholder="Apellidos" TextColor="white" PlaceholderColor="#b2bec3"/>
+            <Entry x:Name="txtDocu" Placeholder="Documento de identidad" TextColor="white" PlaceholderColor="#b2bec3"/>
+            
+            <Entry x:Name="txtCorreo" Placeholder="Correo" TextColor="white" PlaceholderColor="#b2bec3"/>
+            <Entry x:Name="txtTel" Placeholder="Teléfono / celular" TextColor="white" PlaceholderColor="#b2bec3"/>
+            <Entry x:Name="txtDir" Placeholder="Direccion de residencia" TextColor="white" PlaceholderColor="#b2bec3"/>
+            
+            <Entry x:Name="txtCont" Placeholder="Contraseña" IsPassword="True" TextColor="white" PlaceholderColor="#b2bec3"/>
+            <Entry x:Name="txtConfCont" Placeholder="Confirmar contraseña" IsPassword="True" TextColor="white" PlaceholderColor="#b2bec3"/>
+            
+            <Button VerticalOptions="Center" Text="Regitrar" BackgroundColor="#301B3F" TextColor="White" CornerRadius="50" 
+                    Clicked="Registro_Clicked"
+                    />
+           
+        </StackLayout>
+        
+    </Grid>
+</ScrollView>
+
+</ContentPage>
